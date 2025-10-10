@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather-Forecast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" role="application">
+    <div class="main">
+      <header>
+        <div>
+          <h1>Weather Forecast</h1>
+          <p>Enter the Search city - Get Current weather + 7-day Forecast</p>
+        </div>
+      </header>
+
+      <div class="search" role="search">
+        <input id="cityInput" placeholder="Type city (e.g. , Mumbai,London,Ujjain)" >
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <div id="status"></div>
+
+      <section id="current" class="current" hidden>
+        <div class="icon" id="curIcon">☀️</div>
+        <div class="meta">
+          <h2 id="curPlace">City,Country</h2>
+          <p id="curDesc">Clear • 25°C</p>
+          <p id="curTime" ></p>
+        </div>
+        
+        <div style="margin-left: auto; text-align:right ">
+          <div  id="curTemp">--°C</div>
+          <div  id="curFeels">Feels like --°C</div>
+        </div>
+      </section>
+
+      <div>
+        <h3 style="margin:0 0 8px 0">Next 7 days</h3>
+        <div id="forecastGrid" class="grid"></div>
+      </div>
+    </div>
+
+    <aside class="side" aria-labelledby="detailsTitle">
+      <h3 id="detailsTitle">Details</h3>
+      <div class="meta-list" style="margin-top: 8px;">
+
+        <div class="meta-item">
+          <div>Latitude / Longitude</div>
+          <div id="latlon">—</div>
+        </div>
+
+        <div class="meta-item">
+          <div>Wind speed</div>
+          <div id="wind">—</div>
+        </div>
+
+        <div class="meta-item">
+          <div>Humidity</div>
+          <div id="humidity">—</div>
+        </div>
+
+        <div class="meta-item">
+          <div>Pressure</div>
+          <div id="pressure">—</div>
+        </div>
+
+      </div>
+
+      <hr style="margin: 14px 0; border:none; border-top:1px solid rgba(255,255,255,0.05)">
+      <p class="describe">
+        Data source: Open-Meteo (no API key required). The app uses Open-Meteo Geocoding + Forecast APIs.
+      </p>
+      <footer>Built with ❤️ • </footer>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
